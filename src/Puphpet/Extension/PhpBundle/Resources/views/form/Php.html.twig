@@ -24,11 +24,11 @@
                         </label><br />
                         <label class="radio-inline">
                             <input type="radio" name="php[sapi]" value="fpm"
-                                   {% if php.version == 'fpm' %}checked{% endif %} /> PHP-FPM
+                                   {% if php.sapi == 'fpm' %}checked{% endif %} /> PHP-FPM
                         </label>
                         <label class="radio-inline">
                             <input type="radio" name="php[sapi]" value="mod"
-                                   {% if php.version == 'module' %}checked{% endif %} /> Mod_PHP
+                                   {% if php.sapi == 'mod' %}checked{% endif %} /> Mod_PHP
                         </label>
 
                         <p class="help-block">
