@@ -11,15 +11,24 @@
 
                 <div class="row install-checkbox-container">
                     <div class="col-xs-12">
-                        <label class="checkbox-inline">
+                        <label>
                             <input type="checkbox" class="install-checkbox update-other-input"
                                    name="php[install]"
                                    data-update-hhvm[install]
                                    data-hide-on-uncheck="#php-config-container"
                                    {% if php.install %}checked{% endif %} value="1" />
+
                             Install PHP
                             {{ popover.small('PHP is a toy language accidentally chosen to power
                                 some of the largest websites in the world. You probably want Ruby?') }}
+                        </label><br />
+                        <label class="radio-inline">
+                            <input type="radio" name="php[sapi]" value="fpm"
+                                   {% if php.version == 'fpm' %}checked{% endif %} /> PHP-FPM
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="php[sapi]" value="mod"
+                                   {% if php.version == 'module' %}checked{% endif %} /> Mod_PHP
                         </label>
 
                         <p class="help-block">

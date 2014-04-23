@@ -1,5 +1,7 @@
 install: 0
 
+sapi: fpm
+
 version: 55
 
 composer: 1
